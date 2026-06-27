@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-brand-cream: #FCFAF7;
+  --color-brand-warm-white: #F8F6F0;
+  --color-brand-sand: #E6DFD3;
+  --color-brand-stone: #7C756B;
+  --color-brand-charcoal: #1E201E;
+  --color-brand-sage: #B2C4B2;
+  --color-brand-forest: #3F4E3F;
+  --color-brand-ocean: #4B6B7C;
+  --color-brand-sky: #CBD9E0;
+  --color-brand-gold: #C4A46D;
+  --color-brand-terracotta: #D48C70;
+  
+  --color-dark-bg: #141514;
+  --color-dark-card: #1F211F;
+  --color-dark-border: #2C2E2C;
+  --color-dark-text: #E1E3E1;
+  --color-dark-muted: #8D908D;
+
+  --font-sans: "Outfit", "Inter", system-ui, sans-serif;
+
+  --shadow-premium: 0 4px 20px -2px rgba(124, 117, 107, 0.08);
+  --shadow-premium-lg: 0 10px 30px -5px rgba(124, 117, 107, 0.12);
+  --shadow-inner-soft: inset 0 2px 4px 0 rgba(0, 0, 0, 0.02);
+
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-brand-charcoal);
+  background-color: #F2EDE4;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar Hide for touch-like mobile scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Glassmorphism overrides */
+.glass {
+  background: rgba(252, 250, 247, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.dark .glass {
+  background: rgba(31, 33, 31, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Custom scroll transitions */
+.smooth-scroll {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Disable standard button highlights */
+button, div, span, a {
+  -webkit-tap-highlight-color: transparent;
+}

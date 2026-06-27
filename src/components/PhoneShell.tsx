@@ -90,10 +90,10 @@ export const PhoneShell: React.FC<PhoneShellProps> = ({ children }) => {
   };
 
   return (
-    <div className={`min-h-screen w-full flex flex-col md:flex-row items-center justify-center p-4 md:p-8 select-none transition-colors duration-500 ${darkMode ? 'bg-zinc-950 text-dark-text' : 'bg-[#FAF8F5] text-brand-charcoal'}`}>
+    <div className={`min-h-screen w-full flex flex-col md:flex-row items-center justify-center p-0 md:p-8 select-none transition-colors duration-500 ${darkMode ? 'bg-zinc-950 text-dark-text' : 'bg-[#FAF8F5] text-brand-charcoal'}`}>
       
       {/* App Simulator Info Panel (Left Side on Desktop) */}
-      <div className="mb-6 md:mb-0 md:mr-12 md:max-w-xs text-center md:text-left flex flex-col items-center md:items-start">
+      <div className="hidden md:flex mb-6 md:mb-0 md:mr-12 md:max-w-xs text-center md:text-left flex-col items-center md:items-start">
         <div className="flex items-center space-x-2 bg-brand-forest/10 dark:bg-brand-sage/10 px-3.5 py-1.5 rounded-full mb-3">
           <span className="w-2 h-2 rounded-full bg-brand-forest dark:bg-brand-sage animate-ping" />
           <span className="text-xs font-semibold uppercase tracking-wider text-brand-forest dark:text-brand-sage">Interactive Demo</span>
@@ -126,19 +126,19 @@ export const PhoneShell: React.FC<PhoneShellProps> = ({ children }) => {
       </div>
 
       {/* Main iPhone 15 Pro Frame */}
-      <div className="relative shadow-[0_25px_60px_-15px_rgba(40,30,20,0.22)] dark:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.65)] rounded-[55px] p-[12px] bg-gradient-to-br from-zinc-800 to-zinc-950 border-[4px] border-zinc-700 w-[385px] h-[812px] flex-shrink-0 transition-transform duration-500 hover:scale-[1.01]">
+      <div className="relative w-full h-screen md:w-[385px] md:h-[812px] md:rounded-[55px] md:p-[12px] md:bg-gradient-to-br md:from-zinc-800 md:to-zinc-950 md:border-[4px] md:border-zinc-700 md:shadow-[0_25px_60px_-15px_rgba(40,30,20,0.22)] dark:md:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.65)] md:flex-shrink-0 transition-transform duration-500 hover:scale-[1.01]">
         
         {/* Physical buttons styling */}
-        <div className="absolute top-[120px] -left-[16px] w-[4px] h-[40px] bg-zinc-800 rounded-l" />
-        <div className="absolute top-[175px] -left-[16px] w-[4px] h-[55px] bg-zinc-800 rounded-l" />
-        <div className="absolute top-[240px] -left-[16px] w-[4px] h-[55px] bg-zinc-800 rounded-l" />
-        <div className="absolute top-[190px] -right-[16px] w-[4px] h-[75px] bg-zinc-800 rounded-r" />
+        <div className="hidden md:block absolute top-[120px] -left-[16px] w-[4px] h-[40px] bg-zinc-800 rounded-l" />
+        <div className="hidden md:block absolute top-[175px] -left-[16px] w-[4px] h-[55px] bg-zinc-800 rounded-l" />
+        <div className="hidden md:block absolute top-[240px] -left-[16px] w-[4px] h-[55px] bg-zinc-800 rounded-l" />
+        <div className="hidden md:block absolute top-[190px] -right-[16px] w-[4px] h-[75px] bg-zinc-800 rounded-r" />
 
         {/* Screen Container */}
-        <div className={`relative w-full h-full rounded-[44px] overflow-hidden flex flex-col transition-colors duration-500 ${darkMode ? 'bg-dark-bg' : 'bg-brand-cream'}`}>
+        <div className={`relative w-full h-full rounded-none md:rounded-[44px] overflow-hidden flex flex-col transition-colors duration-500 ${darkMode ? 'bg-dark-bg' : 'bg-brand-cream'}`}>
           
           {/* Status Bar */}
-          <div className="relative z-50 h-11 flex items-center justify-between px-7 select-none text-[13px] font-semibold text-brand-charcoal dark:text-dark-text bg-transparent">
+          <div className="relative z-50 h-11 hidden md:flex items-center justify-between px-7 select-none text-[13px] font-semibold text-brand-charcoal dark:text-dark-text bg-transparent">
             <div>{time || '9:41 AM'}</div>
             
             {/* Battery / Wifi Signals right align */}
@@ -188,7 +188,7 @@ export const PhoneShell: React.FC<PhoneShellProps> = ({ children }) => {
                 <motion.div
                   initial={{ scale: 0.9, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
-                  className="w-[110px] h-[28px] bg-brand-charcoal dark:bg-neutral-950 rounded-full flex items-center justify-center shadow-inner-soft"
+                  className="w-[110px] h-[28px] bg-brand-charcoal dark:bg-neutral-950 rounded-full hidden md:flex items-center justify-center shadow-inner-soft"
                 >
                   {/* Camera hole simulation inside pill */}
                   <div className="w-2.5 h-2.5 rounded-full bg-zinc-900 absolute left-4" />
@@ -238,7 +238,7 @@ export const PhoneShell: React.FC<PhoneShellProps> = ({ children }) => {
           )}
 
           {/* Bottom Physical Home Bar Indicator */}
-          <div className="h-6 flex items-center justify-center bg-transparent z-40 pointer-events-none select-none">
+          <div className="h-6 hidden md:flex items-center justify-center bg-transparent z-40 pointer-events-none select-none">
             <div className="w-32 h-[4px] rounded-full bg-brand-charcoal/20 dark:bg-white/20" />
           </div>
 

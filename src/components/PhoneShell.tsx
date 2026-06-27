@@ -90,7 +90,7 @@ export const PhoneShell: React.FC<PhoneShellProps> = ({ children }) => {
   };
 
   return (
-    <div className={`min-h-screen w-full flex flex-col md:flex-row items-center justify-center p-0 md:p-8 select-none transition-colors duration-500 ${darkMode ? 'bg-zinc-950 text-dark-text' : 'bg-[#FAF8F5] text-brand-charcoal'}`}>
+    <div className={`min-h-[100dvh] w-full flex flex-col md:flex-row items-center justify-center p-0 md:p-8 select-none transition-colors duration-500 ${darkMode ? 'bg-zinc-950 text-dark-text' : 'bg-[#FAF8F5] text-brand-charcoal'}`}>
       
       {/* App Simulator Info Panel (Left Side on Desktop) */}
       <div className="hidden md:flex mb-6 md:mb-0 md:mr-12 md:max-w-xs text-center md:text-left flex-col items-center md:items-start">
@@ -126,7 +126,7 @@ export const PhoneShell: React.FC<PhoneShellProps> = ({ children }) => {
       </div>
 
       {/* Main iPhone 15 Pro Frame */}
-      <div className="relative w-full h-screen md:w-[385px] md:h-[812px] md:rounded-[55px] md:p-[12px] md:bg-gradient-to-br md:from-zinc-800 md:to-zinc-950 md:border-[4px] md:border-zinc-700 md:shadow-[0_25px_60px_-15px_rgba(40,30,20,0.22)] dark:md:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.65)] md:flex-shrink-0 transition-transform duration-500 hover:scale-[1.01]">
+      <div className="relative w-full h-[100dvh] md:w-[385px] md:h-[812px] md:rounded-[55px] md:p-[12px] md:bg-gradient-to-br md:from-zinc-800 md:to-zinc-950 md:border-[4px] md:border-zinc-700 md:shadow-[0_25px_60px_-15px_rgba(40,30,20,0.22)] dark:md:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.65)] md:flex-shrink-0 transition-transform duration-500 hover:scale-[1.01]">
         
         {/* Physical buttons styling */}
         <div className="hidden md:block absolute top-[120px] -left-[16px] w-[4px] h-[40px] bg-zinc-800 rounded-l" />

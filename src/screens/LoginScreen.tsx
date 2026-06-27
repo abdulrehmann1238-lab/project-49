@@ -14,8 +14,8 @@ import {
 export const LoginScreen: React.FC = () => {
   const login = useAppStore((state) => state.login);
   
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('alex.mercer@community.com');
+  const [phone, setPhone] = useState('(555) 019-2834');
   const [activeBiometric, setActiveBiometric] = useState<'face' | 'finger' | null>(null);
   const [biometricStatus, setBiometricStatus] = useState<'scanning' | 'success' | 'idle'>('idle');
 
